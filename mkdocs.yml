@@ -1,0 +1,173 @@
+site_name: FloofOS
+site_url: https://floofos.io
+site_description: Fast Line-rate Offload On Fabric Operating System
+site_author: FloofOS Networks
+
+repo_name: floof-os/floofos
+repo_url: https://github.com/floof-os/floofos
+
+copyright: Copyright &copy; 2025 FloofOS Networks
+
+theme:
+  name: material
+  language: en
+  palette:
+    scheme: default
+    primary: white
+    accent: red
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+  logo: assets/logo.svg
+  favicon: assets/favicon.ico
+
+plugins:
+  - search:
+      lang: en
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: floof-os
+      repo: floofos
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/floof-os
+    - icon: fontawesome/solid/globe
+      link: https://floofos.io
+  generator: false
+  version:
+    provider: mike
+    default: stable
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: Thanks for your feedback!
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Docs:
+    - docs/index.md
+    - Getting Started:
+      - getting-started/index.md
+      - First Boot Setup: getting-started/first-boot.md
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quick-start.md
+    - Configuration:
+      - configuration/index.md
+      - System: configuration/system.md
+      - Interfaces: configuration/interfaces.md
+      - VLAN: configuration/vlan.md
+      - Bridge: configuration/bridge.md
+      - Bonding: configuration/bonding.md
+      - Cross-Connect: configuration/xconnect.md
+      - Routing: configuration/routing.md
+      - BGP: configuration/bgp.md
+      - VXLAN: configuration/vxlan.md
+      - EVPN-VXLAN: configuration/evpn-vxlan.md
+      - GRE: configuration/gre.md
+      - IPIP: configuration/ipip.md
+      - IPsec: configuration/ipsec.md
+      - IKEv2: configuration/ikev2.md
+      - WireGuard: configuration/wireguard.md
+      - MPLS: configuration/mpls.md
+      - SRv6: configuration/srv6.md
+      - DHCP: configuration/dhcp.md
+      - ACL: configuration/acl.md
+      - QoS: configuration/qos.md
+    - Security:
+      - security/index.md
+      - User Management: security/users.md
+      - Firewall: security/firewall.md
+      - Fail2ban: security/fail2ban.md
+      - SSH: security/ssh.md
+    - Monitoring:
+      - monitoring/index.md
+      - SNMP: monitoring/snmp.md
+      - Logging: monitoring/logging.md
+      - Traffic Monitor: monitoring/traffic.md
+    - Operations:
+      - operations/index.md
+      - Backup & Restore: operations/backup-restore.md
+      - Commit & Rollback: operations/commit-rollback.md
+      - Network Diagnostics: operations/diagnostics.md
+    - Reference:
+      - reference/index.md
+      - VPP Docs Reference: reference/vpp-commands.md
+      - BIRD Docs Reference: reference/bird-commands.md
+  - Architecture:
+    - architecture/index.md
+    - System Overview: architecture/overview.md
+    - Dataplane Architecture: architecture/dataplane.md
+  - Download:
+    - download.md
+    - FloofOS 1.0: changelog/1.0.0.md
